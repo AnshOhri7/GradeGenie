@@ -1,9 +1,18 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import { Logo } from "@/components/logo"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { Logo } from "@/components/logo";
+// "use client";
+// import React, { use, useEffect, useState } from "react";
 
 export default function Home() {
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/api/home")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // }, []);
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background">
@@ -39,8 +48,9 @@ export default function Home() {
                     Meet Your New AI Teaching Partner.
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                    GradeGenie is your AI copilot, designed to empower you to design engaging courses, deliver
-                    personalized feedback, and improve student outcomes—all while reclaiming your time.
+                    GradeGenie is your AI copilot, designed to empower you to
+                    design engaging courses, deliver personalized feedback, and
+                    improve student outcomes—all while reclaiming your time.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
@@ -51,7 +61,11 @@ export default function Home() {
                     </Button>
                   </Link>
                   <Link href="/demo">
-                    <Button size="lg" variant="outline" className="border-primary text-primary">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-primary text-primary"
+                    >
                       See GradeGenie in Action
                     </Button>
                   </Link>
@@ -59,7 +73,9 @@ export default function Home() {
                 <div className="flex items-center space-x-4 text-sm">
                   <div className="flex items-center gap-1">
                     <div className="h-2 w-2 rounded-full bg-primary" />
-                    <span>Unlock all features with 30 free credits—cancel anytime.</span>
+                    <span>
+                      Unlock all features with 30 free credits—cancel anytime.
+                    </span>
                   </div>
                   <div className="flex items-center gap-1">
                     <div className="h-2 w-2 rounded-full bg-primary" />
@@ -67,7 +83,10 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-1">
                     <div className="h-2 w-2 rounded-full bg-primary" />
-                    <span>Elevate student success and rediscover your passion for education.</span>
+                    <span>
+                      Elevate student success and rediscover your passion for
+                      education.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -79,14 +98,19 @@ export default function Home() {
                       <div className="h-2 w-2 rounded-full bg-yellow-500" />
                       <div className="h-2 w-2 rounded-full bg-green-500" />
                     </div>
-                    <div className="ml-4 text-xs font-medium">GradeGenie Dashboard</div>
+                    <div className="ml-4 text-xs font-medium">
+                      GradeGenie Dashboard
+                    </div>
                   </div>
                   <div className="p-4">
                     <div className="grid gap-4">
                       <div className="rounded-lg border p-4">
-                        <h3 className="text-lg font-semibold">Automate grading with AI</h3>
+                        <h3 className="text-lg font-semibold">
+                          Automate grading with AI
+                        </h3>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
-                          Grade in bulk using AI that mirrors your unique teaching style.
+                          Grade in bulk using AI that mirrors your unique
+                          teaching style.
                         </p>
                         <div className="mt-4 flex items-center gap-2">
                           <div className="h-2 w-2 rounded-full bg-primary" />
@@ -99,13 +123,23 @@ export default function Home() {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="rounded-lg border p-4">
                           <h3 className="text-sm font-medium">Time Saved</h3>
-                          <p className="text-2xl font-bold text-primary">15+ hrs</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">per week</p>
+                          <p className="text-2xl font-bold text-primary">
+                            15+ hrs
+                          </p>
+                          <p className="text-xs text-gray-500 dark:text-gray-400">
+                            per week
+                          </p>
                         </div>
                         <div className="rounded-lg border p-4">
-                          <h3 className="text-sm font-medium">Feedback Quality</h3>
-                          <p className="text-2xl font-bold text-primary">Personalized</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">higher-quality</p>
+                          <h3 className="text-sm font-medium">
+                            Feedback Quality
+                          </h3>
+                          <p className="text-2xl font-bold text-primary">
+                            Personalized
+                          </p>
+                          <p className="text-xs text-gray-500 dark:text-gray-400">
+                            higher-quality
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -119,13 +153,16 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-primary">Key Features</div>
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-primary">
+                  Key Features
+                </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary font-onest">
                   AI-Powered Academic Workflows
                 </h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  GradeGenie streamlines the entire academic process from curriculum design to student feedback, making
-                  your teaching experience more rewarding.
+                  GradeGenie streamlines the entire academic process from
+                  curriculum design to student feedback, making your teaching
+                  experience more rewarding.
                 </p>
               </div>
             </div>
@@ -138,8 +175,12 @@ export default function Home() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-primary font-onest">{feature.title}</h3>
-                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-primary font-onest">
+                    {feature.title}
+                  </h3>
+                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -152,17 +193,23 @@ export default function Home() {
             © 2025 GradeGenie. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="/terms" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
+            <Link
+              href="/terms"
+              className="text-sm text-gray-500 hover:underline dark:text-gray-400"
+            >
               Terms
             </Link>
-            <Link href="/privacy" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
+            <Link
+              href="/privacy"
+              className="text-sm text-gray-500 hover:underline dark:text-gray-400"
+            >
               Privacy
             </Link>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 const features = [
@@ -193,7 +240,8 @@ const features = [
   },
   {
     title: "Assignment Generator",
-    description: "Design effective assignments with clear instructions, requirements, and expectations.",
+    description:
+      "Design effective assignments with clear instructions, requirements, and expectations.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +313,8 @@ const features = [
   },
   {
     title: "LMS Integration",
-    description: "Seamlessly connect with Moodle, Canvas, and Google Classroom for grades and assignments.",
+    description:
+      "Seamlessly connect with Moodle, Canvas, and Google Classroom for grades and assignments.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +337,8 @@ const features = [
   },
   {
     title: "Analytics Dashboard",
-    description: "Track student progress, identify learning gaps, and measure teaching effectiveness.",
+    description:
+      "Track student progress, identify learning gaps, and measure teaching effectiveness.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -307,4 +357,4 @@ const features = [
       </svg>
     ),
   },
-]
+];
