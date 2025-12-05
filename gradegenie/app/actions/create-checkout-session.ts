@@ -4,16 +4,19 @@ import { redirect } from "next/navigation"
 import Stripe from "stripe"
 
 const stripe = new Stripe(
-  process.env.STRIPE_SECRET_KEY ||
+  process.env.STRIPE_SECRET_KEY! ||
     "X",
   {
-    apiVersion: "2023-10-16",
+    apiVersion: "2024-06-20",
   },
 )
 
 // Price ID for the subscription
 const PRICE_ID = "X" // Replace with your actual price ID
 
+export async function createCheckoutSession() {
+  const origin = headers().get('origin') ?? 'https://your-site.vercel.app';
+  
 export async function verifyEmailWithReoon(email: string): Promise<boolean> {
   try {
     const response = await fetch("https://api.reoon.com/email-verifier", {
